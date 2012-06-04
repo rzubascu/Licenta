@@ -1,0 +1,402 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9E5D82921555581A00795F76 /* microapp_input_field.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E5D82901555581A00795F76 /* microapp_input_field.png */; };
+		9E5D82931555581A00795F76 /* microapp_input_field@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E5D82911555581A00795F76 /* microapp_input_field@2x.png */; };
+		9E5D829615555A0C00795F76 /* microapp_submit_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E5D829415555A0C00795F76 /* microapp_submit_btn.png */; };
+		9E5D829715555A0C00795F76 /* microapp_submit_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E5D829515555A0C00795F76 /* microapp_submit_btn@2x.png */; };
+		9EC308B7154D46E7003086C5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC308B6154D46E7003086C5 /* UIKit.framework */; };
+		9EC308B9154D46E7003086C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC308B8154D46E7003086C5 /* Foundation.framework */; };
+		9EC308BB154D46E7003086C5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC308BA154D46E7003086C5 /* CoreGraphics.framework */; };
+		9EC308BD154D46E7003086C5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC308BC154D46E7003086C5 /* CoreData.framework */; };
+		9EC308C3154D46E7003086C5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9EC308C1154D46E7003086C5 /* InfoPlist.strings */; };
+		9EC308C5154D46E7003086C5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC308C4154D46E7003086C5 /* main.m */; };
+		9EC308C9154D46E7003086C5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC308C8154D46E7003086C5 /* AppDelegate.m */; };
+		9EC308CC154D46E7003086C5 /* Licenta.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9EC308CA154D46E7003086C5 /* Licenta.xcdatamodeld */; };
+		9EC308D7154D7931003086C5 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC308D6154D7931003086C5 /* RootViewController.m */; };
+		9EE3AFDA157D151F009A78D1 /* Defines.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3AFD9157D151F009A78D1 /* Defines.m */; };
+		9EE714F615695E6100CA394B /* microapp_input_field_disabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EE714F415695E6100CA394B /* microapp_input_field_disabled.png */; };
+		9EE714F715695E6100CA394B /* microapp_input_field_disabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EE714F515695E6100CA394B /* microapp_input_field_disabled@2x.png */; };
+		9EE7150D1569645400CA394B /* LLLoginCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE715051569645400CA394B /* LLLoginCell.m */; };
+		9EE7150E1569645400CA394B /* LLLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE715081569645400CA394B /* LLLoginViewController.m */; };
+		9EE7150F1569645400CA394B /* LLAuthenticationHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE7150B1569645400CA394B /* LLAuthenticationHandler.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9E5D82901555581A00795F76 /* microapp_input_field.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = microapp_input_field.png; sourceTree = "<group>"; };
+		9E5D82911555581A00795F76 /* microapp_input_field@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "microapp_input_field@2x.png"; sourceTree = "<group>"; };
+		9E5D829415555A0C00795F76 /* microapp_submit_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = microapp_submit_btn.png; sourceTree = "<group>"; };
+		9E5D829515555A0C00795F76 /* microapp_submit_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "microapp_submit_btn@2x.png"; sourceTree = "<group>"; };
+		9EC308B2154D46E7003086C5 /* Licenta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Licenta.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EC308B6154D46E7003086C5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9EC308B8154D46E7003086C5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9EC308BA154D46E7003086C5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9EC308BC154D46E7003086C5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		9EC308C0154D46E7003086C5 /* Licenta-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Licenta-Info.plist"; sourceTree = "<group>"; };
+		9EC308C2154D46E7003086C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9EC308C4154D46E7003086C5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9EC308C6154D46E7003086C5 /* Licenta-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Licenta-Prefix.pch"; sourceTree = "<group>"; };
+		9EC308C7154D46E7003086C5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9EC308C8154D46E7003086C5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9EC308CB154D46E7003086C5 /* Licenta.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Licenta.xcdatamodel; sourceTree = "<group>"; };
+		9EC308D5154D7931003086C5 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootViewController.h; path = Classes/RootViewController.h; sourceTree = "<group>"; };
+		9EC308D6154D7931003086C5 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootViewController.m; path = Classes/RootViewController.m; sourceTree = "<group>"; };
+		9EE3AFD8157D151F009A78D1 /* Defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Defines.h; sourceTree = "<group>"; };
+		9EE3AFD9157D151F009A78D1 /* Defines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Defines.m; sourceTree = "<group>"; };
+		9EE714F415695E6100CA394B /* microapp_input_field_disabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = microapp_input_field_disabled.png; sourceTree = "<group>"; };
+		9EE714F515695E6100CA394B /* microapp_input_field_disabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "microapp_input_field_disabled@2x.png"; sourceTree = "<group>"; };
+		9EE715041569645400CA394B /* LLLoginCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLLoginCell.h; sourceTree = "<group>"; };
+		9EE715051569645400CA394B /* LLLoginCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLLoginCell.m; sourceTree = "<group>"; };
+		9EE715071569645400CA394B /* LLLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLLoginViewController.h; sourceTree = "<group>"; };
+		9EE715081569645400CA394B /* LLLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLLoginViewController.m; sourceTree = "<group>"; };
+		9EE7150A1569645400CA394B /* LLAuthenticationHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLAuthenticationHandler.h; sourceTree = "<group>"; };
+		9EE7150B1569645400CA394B /* LLAuthenticationHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLAuthenticationHandler.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9EC308AF154D46E7003086C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EC308B7154D46E7003086C5 /* UIKit.framework in Frameworks */,
+				9EC308B9154D46E7003086C5 /* Foundation.framework in Frameworks */,
+				9EC308BB154D46E7003086C5 /* CoreGraphics.framework in Frameworks */,
+				9EC308BD154D46E7003086C5 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9E7E562B155057AD00F4AC85 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				9EE715031569645400CA394B /* Cells */,
+				9EE715061569645400CA394B /* Controller */,
+				9EE715091569645400CA394B /* Other */,
+				9EE7150C1569645400CA394B /* View */,
+			);
+			name = Login;
+			path = Classes/Login;
+			sourceTree = "<group>";
+		};
+		9EC308A7154D46E6003086C5 = {
+			isa = PBXGroup;
+			children = (
+				9EC308BE154D46E7003086C5 /* Licenta */,
+				9EC308B5154D46E7003086C5 /* Frameworks */,
+				9EC308B3154D46E7003086C5 /* Products */,
+				9EC308D4154D7344003086C5 /* Resources */,
+			);
+			sourceTree = "<group>";
+		};
+		9EC308B3154D46E7003086C5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9EC308B2154D46E7003086C5 /* Licenta.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9EC308B5154D46E7003086C5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9EC308B6154D46E7003086C5 /* UIKit.framework */,
+				9EC308B8154D46E7003086C5 /* Foundation.framework */,
+				9EC308BA154D46E7003086C5 /* CoreGraphics.framework */,
+				9EC308BC154D46E7003086C5 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9EC308BE154D46E7003086C5 /* Licenta */ = {
+			isa = PBXGroup;
+			children = (
+				9EC308C7154D46E7003086C5 /* AppDelegate.h */,
+				9EC308C8154D46E7003086C5 /* AppDelegate.m */,
+				9EC308D5154D7931003086C5 /* RootViewController.h */,
+				9EC308D6154D7931003086C5 /* RootViewController.m */,
+				9E7E562B155057AD00F4AC85 /* Login */,
+				9EE3AFD6157D1503009A78D1 /* Core */,
+				9EC308CA154D46E7003086C5 /* Licenta.xcdatamodeld */,
+				9EC308BF154D46E7003086C5 /* Supporting Files */,
+			);
+			path = Licenta;
+			sourceTree = "<group>";
+		};
+		9EC308BF154D46E7003086C5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9EC308C0154D46E7003086C5 /* Licenta-Info.plist */,
+				9EC308C1154D46E7003086C5 /* InfoPlist.strings */,
+				9EC308C4154D46E7003086C5 /* main.m */,
+				9EC308C6154D46E7003086C5 /* Licenta-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9EC308D4154D7344003086C5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9EE714F415695E6100CA394B /* microapp_input_field_disabled.png */,
+				9EE714F515695E6100CA394B /* microapp_input_field_disabled@2x.png */,
+				9E5D82901555581A00795F76 /* microapp_input_field.png */,
+				9E5D82911555581A00795F76 /* microapp_input_field@2x.png */,
+				9E5D829415555A0C00795F76 /* microapp_submit_btn.png */,
+				9E5D829515555A0C00795F76 /* microapp_submit_btn@2x.png */,
+			);
+			name = Resources;
+			path = Licenta/Resources;
+			sourceTree = "<group>";
+		};
+		9EE3AFD6157D1503009A78D1 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				9EE3AFD8157D151F009A78D1 /* Defines.h */,
+				9EE3AFD9157D151F009A78D1 /* Defines.m */,
+			);
+			name = Core;
+			path = Classes/Core;
+			sourceTree = "<group>";
+		};
+		9EE715031569645400CA394B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9EE715041569645400CA394B /* LLLoginCell.h */,
+				9EE715051569645400CA394B /* LLLoginCell.m */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		9EE715061569645400CA394B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9EE715071569645400CA394B /* LLLoginViewController.h */,
+				9EE715081569645400CA394B /* LLLoginViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9EE715091569645400CA394B /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				9EE7150A1569645400CA394B /* LLAuthenticationHandler.h */,
+				9EE7150B1569645400CA394B /* LLAuthenticationHandler.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		9EE7150C1569645400CA394B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9EC308B1154D46E7003086C5 /* Licenta */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9EC308CF154D46E7003086C5 /* Build configuration list for PBXNativeTarget "Licenta" */;
+			buildPhases = (
+				9EC308AE154D46E7003086C5 /* Sources */,
+				9EC308AF154D46E7003086C5 /* Frameworks */,
+				9EC308B0154D46E7003086C5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Licenta;
+			productName = Licenta;
+			productReference = 9EC308B2154D46E7003086C5 /* Licenta.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9EC308A9154D46E6003086C5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 9EC308AC154D46E6003086C5 /* Build configuration list for PBXProject "Licenta" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9EC308A7154D46E6003086C5;
+			productRefGroup = 9EC308B3154D46E7003086C5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9EC308B1154D46E7003086C5 /* Licenta */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9EC308B0154D46E7003086C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EC308C3154D46E7003086C5 /* InfoPlist.strings in Resources */,
+				9E5D82921555581A00795F76 /* microapp_input_field.png in Resources */,
+				9E5D82931555581A00795F76 /* microapp_input_field@2x.png in Resources */,
+				9E5D829615555A0C00795F76 /* microapp_submit_btn.png in Resources */,
+				9E5D829715555A0C00795F76 /* microapp_submit_btn@2x.png in Resources */,
+				9EE714F615695E6100CA394B /* microapp_input_field_disabled.png in Resources */,
+				9EE714F715695E6100CA394B /* microapp_input_field_disabled@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9EC308AE154D46E7003086C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EC308C5154D46E7003086C5 /* main.m in Sources */,
+				9EC308C9154D46E7003086C5 /* AppDelegate.m in Sources */,
+				9EC308CC154D46E7003086C5 /* Licenta.xcdatamodeld in Sources */,
+				9EC308D7154D7931003086C5 /* RootViewController.m in Sources */,
+				9EE7150D1569645400CA394B /* LLLoginCell.m in Sources */,
+				9EE7150E1569645400CA394B /* LLLoginViewController.m in Sources */,
+				9EE7150F1569645400CA394B /* LLAuthenticationHandler.m in Sources */,
+				9EE3AFDA157D151F009A78D1 /* Defines.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9EC308C1154D46E7003086C5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9EC308C2154D46E7003086C5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9EC308CD154D46E7003086C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9EC308CE154D46E7003086C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9EC308D0154D46E7003086C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Licenta/Licenta-Prefix.pch";
+				INFOPLIST_FILE = "Licenta/Licenta-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9EC308D1154D46E7003086C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Licenta/Licenta-Prefix.pch";
+				INFOPLIST_FILE = "Licenta/Licenta-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9EC308AC154D46E6003086C5 /* Build configuration list for PBXProject "Licenta" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9EC308CD154D46E7003086C5 /* Debug */,
+				9EC308CE154D46E7003086C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9EC308CF154D46E7003086C5 /* Build configuration list for PBXNativeTarget "Licenta" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9EC308D0154D46E7003086C5 /* Debug */,
+				9EC308D1154D46E7003086C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9EC308CA154D46E7003086C5 /* Licenta.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9EC308CB154D46E7003086C5 /* Licenta.xcdatamodel */,
+			);
+			currentVersion = 9EC308CB154D46E7003086C5 /* Licenta.xcdatamodel */;
+			path = Licenta.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 9EC308A9154D46E6003086C5 /* Project object */;
+}
