@@ -10,7 +10,8 @@
 
 @implementation LLAuthenticationHandler 
 
-@synthesize isAuthenticated = _isAuthenticated;
+@synthesize isAuthenticated	= _isAuthenticated;
+@synthesize currentUserID		= _currentUserID;
 
 + (LLAuthenticationHandler *)sharedInstance {
 	static LLAuthenticationHandler *sharedInstance = nil;
@@ -32,6 +33,10 @@
 // isAuthenticated setter
 - (void)setIsAuthenticated:(BOOL)isAuthenticated {
 	_isAuthenticated = isAuthenticated;
+}
+
+- (void)setCurrentUserID:(int)currentUserID {
+	_currentUserID = currentUserID;
 }
 
 @end

@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "LLLoginViewController.h"
+#import "LLClassesViewController.h"
 
 @implementation AppDelegate
 
@@ -23,16 +24,16 @@
 //	NSManagedObject *failedBankInfo = [NSEntityDescription
 //												  insertNewObjectForEntityForName:@"Teacher"
 //												  inManagedObjectContext:context];
-//	[failedBankInfo setValue:@"zubby" forKey:@"username"];
+//	[failedBankInfo setValue:@"ancuta" forKey:@"username"];
 //	[failedBankInfo setValue:@"baritiu" forKey:@"password"];
-//	[failedBankInfo setValue:[NSNumber numberWithInt:0] forKey:@"id_teacher"];
+//	[failedBankInfo setValue:[NSNumber numberWithInt:1] forKey:@"id_teacher"];
 //	NSManagedObject *failedBankInfo = [NSEntityDescription
 //												  insertNewObjectForEntityForName:@"Teacher_Class"
 //												  inManagedObjectContext:context];
-//	[failedBankInfo setValue:[NSNumber numberWithInt:1114] forKey:@"id_class"];
-//	[failedBankInfo setValue:[NSNumber numberWithInt:1003] forKey:@"id_discipline"];
-//	[failedBankInfo setValue:[NSNumber numberWithInt:0] forKey:@"id_teacher"];
-//	[failedBankInfo setValue:@"Third discipline" forKey:@"discipline_name"];
+//	[failedBankInfo setValue:[NSNumber numberWithInt:1115] forKey:@"id_class"];
+//	[failedBankInfo setValue:[NSNumber numberWithInt:1004] forKey:@"id_discipline"];
+//	[failedBankInfo setValue:[NSNumber numberWithInt:1] forKey:@"id_teacher"];
+//	[failedBankInfo setValue:@"Fourth discipline" forKey:@"discipline_name"];
 
 	NSError *error;
 //	if (![context save:&error]) {
@@ -56,7 +57,7 @@
 	
 	_firstController = [[LLLoginViewController alloc] initWithNibName:nil bundle:nil];
 	_firstController.tabBarItem.title = @"Login";
-	_secondController = [[UIViewController alloc] initWithNibName:nil bundle:nil];
+	_secondController = [[LLClassesViewController alloc] initWithNibName:nil bundle:nil];
 	_secondController.tabBarItem.title = @"Classes";
 
 	_thirdController = [[UIViewController alloc] initWithNibName:nil bundle:nil];
@@ -67,8 +68,9 @@
 	NSArray* controllers = [NSArray arrayWithObjects:_firstController, _secondController, _thirdController, _fourthController, nil];
 	
 	[_tabBarController setViewControllers:controllers animated:YES];
+	_navigationController = [[UINavigationController alloc] initWithRootViewController:_tabBarController];
 	
-	[self.window setRootViewController:_tabBarController];
+	[self.window setRootViewController:_navigationController];
 
 	// Override point for customization after application launch.
 	self.window.backgroundColor = [UIColor whiteColor];

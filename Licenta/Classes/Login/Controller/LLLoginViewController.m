@@ -209,6 +209,7 @@ static const CGRect kLoginButtonFrame		= {30.0f, 185.0f, 260.0f, 60.0f};
 //		NSLog(@"Password: %@", [info valueForKey:@"password"]);
 		if ([username isEqualToString:[info valueForKey:@"username"]] && [password isEqualToString:[info valueForKey:@"password"]]) {
 			[self loginSuccessful];
+			break;
 		} else {
 			NSLog(@"Error while logging in");
 		}
@@ -234,6 +235,7 @@ static const CGRect kLoginButtonFrame		= {30.0f, 185.0f, 260.0f, 60.0f};
 	[userDefaults setObject:password forKey:kPasswordKey];
 	// User successfully authenticated
 	[[LLAuthenticationHandler sharedInstance] setIsAuthenticated:YES];
+	[[LLAuthenticationHandler sharedInstance] setCurrentUserID:0];
 	
 }
 

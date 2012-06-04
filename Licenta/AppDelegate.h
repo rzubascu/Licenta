@@ -9,11 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @class LLLoginViewController;
+@class LLClassesViewController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate> {
 	UITabBarController *_tabBarController;
 	LLLoginViewController *_firstController;
-	UIViewController *_secondController;
+	LLClassesViewController *_secondController;
 	UIViewController *_thirdController;
 	UIViewController *_fourthController;
 	UINavigationController *_navigationController;
