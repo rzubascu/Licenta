@@ -34,6 +34,26 @@
 //	[failedBankInfo setValue:[NSNumber numberWithInt:1004] forKey:@"id_discipline"];
 //	[failedBankInfo setValue:[NSNumber numberWithInt:1] forKey:@"id_teacher"];
 //	[failedBankInfo setValue:@"Fourth discipline" forKey:@"discipline_name"];
+	
+//	int studentID = 9069;
+//	for (int i = 0; i <= 15; i++) {
+//		studentID++;
+//		NSString *studentName = [NSString stringWithFormat:@"Other %d", i];
+//		NSManagedObject *failedBankInfo = [NSEntityDescription
+//													  insertNewObjectForEntityForName:@"Student"
+//													  inManagedObjectContext:context];
+//		[failedBankInfo setValue:[NSNumber numberWithInt:1115] forKey:@"id_class"];
+//		[failedBankInfo setValue:[NSNumber numberWithInt:studentID] forKey:@"id_student"];
+//		[failedBankInfo setValue:studentName forKey:@"name"];
+//		
+//		NSError *error;
+//
+//		if (![context save:&error]) {
+//			NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+//		}
+//
+//	}
+	
 
 	NSError *error;
 //	if (![context save:&error]) {
@@ -41,14 +61,13 @@
 //	}
 	
 	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-	NSEntityDescription *entity = [NSEntityDescription entityForName:@"Teacher_Class" inManagedObjectContext:context];
+	NSEntityDescription *entity = [NSEntityDescription entityForName:@"Student" inManagedObjectContext:context];
 	[fetchRequest setEntity:entity];
 	NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
 	for (NSManagedObject *info in fetchedObjects) {
 		NSLog(@"ID class: %@", [info valueForKey:@"id_class"]);
-		NSLog(@"ID discipline: %@", [info valueForKey:@"id_discipline"]);
-		NSLog(@"ID teacher: %@", [info valueForKey:@"id_teacher"]);
-		NSLog(@"Discipline name: %@", [info valueForKey:@"discipline_name"]);
+		NSLog(@"ID student: %@", [info valueForKey:@"id_student"]);
+		NSLog(@"Student name: %@", [info valueForKey:@"name"]);
 	}
 	
 
@@ -57,20 +76,21 @@
 	
 	_firstController = [[LLLoginViewController alloc] initWithNibName:nil bundle:nil];
 	_firstController.tabBarItem.title = @"Login";
+	
 	_secondController = [[LLClassesViewController alloc] initWithNibName:nil bundle:nil];
-	_secondController.tabBarItem.title = @"Classes";
+	_navigationController = [[UINavigationController alloc] initWithRootViewController:_secondController];
+	_navigationController.tabBarItem.title = @"Classes";
+	_navigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
 
 	_thirdController = [[UIViewController alloc] initWithNibName:nil bundle:nil];
 	_thirdController.tabBarItem.title = @"Events";
 	_fourthController = [[UIViewController alloc] initWithNibName:nil bundle:nil];
 	_fourthController.tabBarItem.title = @"Misc";
-	
-	NSArray* controllers = [NSArray arrayWithObjects:_firstController, _secondController, _thirdController, _fourthController, nil];
+	NSArray* controllers = [NSArray arrayWithObjects:_firstController, _navigationController, _thirdController, _fourthController, nil];
 	
 	[_tabBarController setViewControllers:controllers animated:YES];
-	_navigationController = [[UINavigationController alloc] initWithRootViewController:_tabBarController];
 	
-	[self.window setRootViewController:_navigationController];
+	[self.window setRootViewController:_tabBarController];
 
 	// Override point for customization after application launch.
 	self.window.backgroundColor = [UIColor whiteColor];

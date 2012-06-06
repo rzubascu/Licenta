@@ -9,6 +9,9 @@
 #import "LLClassesViewController.h"
 #import "AppDelegate.h"
 #import "LLAuthenticationHandler.h"
+#import "LLStudentsClassViewController.h"
+
+static const UIEdgeInsets kTableViewInsets = {0.0f, 0.0f, 94.0f, 0.0f};
 
 #pragma mark - Private
 
@@ -41,6 +44,7 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	self.view.backgroundColor = [UIColor greenColor];
+	self.navigationItem.title = @"Classes";
 	// Do any additional setup after loading the view.
 	_disciplinesIDArray = [NSMutableArray new];
 	
@@ -68,6 +72,7 @@
 	_classesTableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
 	_classesTableView.dataSource = self;
 	_classesTableView.delegate = self;
+	_classesTableView.contentInset = kTableViewInsets;
 	
 	
 	[self.view addSubview: _classesTableView];
@@ -136,13 +141,13 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-	static NSString *cellIdentifier = @"LoginCellIdentifier";
+	static NSString *cellIdentifier = @"ClassesCellIdentifier";
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
 	if (nil == cell) {
 		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
 												reuseIdentifier:cellIdentifier];
 	}
-	cell.selectionStyle = UITableViewCellSelectionStyleNone;
+//	cell.selectionStyle = UITableViewCellSelectionStyleNone;
 	
 	// Update cell
 	[self updateCell:cell atIndexPath:indexPath];
@@ -155,8 +160,33 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+	AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+	NSManagedObjectContext *context = [appDelegate managedObjectContext];
+	NSError *error;
+	
+	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+	NSEntityDescription *entity = [NSEntityDescription entityForName:@"Teacher_Class" inManagedObjectContext:context];
+	
+	[fetchRequest setEntity:entity];
+	
+	int teacherID = [[LLAuthenticationHandler sharedInstance] currentUserID];
+	NSPredicate *newPredicate = [NSPredicate predicateWithFormat:@"(id_teacher == %@) AND (id_discipline == %@)", [NSNumber numberWithInt:teacherID], [[_disciplinesIDArray objectAtIndex:section] valueForKey:@"id_discipline"]];
+	[fetchRequest setPredicate:newPredicate];
+	fetchRequest.propertiesToFetch = [NSArray arrayWithObject:[[entity propertiesByName] objectForKey:@"discipline_name"]];
+	fetchRequest.returnsDistinctResults = YES;
+	fetchRequest.resultType = NSDictionaryResultType;
+	
+	NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
 
-	return [NSString stringWithFormat:@"%@", [[_disciplinesIDArray objectAtIndex:section] valueForKey:@"id_discipline"]];
+
+	return [NSString stringWithFormat:@"%@", [[fetchedObjects objectAtIndex:0] valueForKey:@"discipline_name"]];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+	NSNumber *classID = [NSNumber numberWithInt:[cell.textLabel.text intValue]];
+	LLStudentsClassViewController *studentsClassController = [[LLStudentsClassViewController alloc] initWithClassID:classID];
+	[self.navigationController pushViewController:studentsClassController animated:YES];
 }
 
 

@@ -12,6 +12,10 @@
 		9E5D82931555581A00795F76 /* microapp_input_field@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E5D82911555581A00795F76 /* microapp_input_field@2x.png */; };
 		9E5D829615555A0C00795F76 /* microapp_submit_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E5D829415555A0C00795F76 /* microapp_submit_btn.png */; };
 		9E5D829715555A0C00795F76 /* microapp_submit_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E5D829515555A0C00795F76 /* microapp_submit_btn@2x.png */; };
+		9E5D9A01157FEF7800CA8C34 /* LLStudentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5D9A00157FEF7800CA8C34 /* LLStudentViewController.m */; };
+		9E5D9A04157FEFB300CA8C34 /* LLStudentProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5D9A03157FEFB300CA8C34 /* LLStudentProfileCell.m */; };
+		9E5D9A0A1580017E00CA8C34 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E5D9A091580017E00CA8C34 /* MessageUI.framework */; };
+		9E8552DD157EA41A00823E0E /* LLStudentsClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E8552DC157EA41A00823E0E /* LLStudentsClassViewController.m */; };
 		9EC308B7154D46E7003086C5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC308B6154D46E7003086C5 /* UIKit.framework */; };
 		9EC308B9154D46E7003086C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC308B8154D46E7003086C5 /* Foundation.framework */; };
 		9EC308BB154D46E7003086C5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC308BA154D46E7003086C5 /* CoreGraphics.framework */; };
@@ -36,6 +40,13 @@
 		9E5D82911555581A00795F76 /* microapp_input_field@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "microapp_input_field@2x.png"; sourceTree = "<group>"; };
 		9E5D829415555A0C00795F76 /* microapp_submit_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = microapp_submit_btn.png; sourceTree = "<group>"; };
 		9E5D829515555A0C00795F76 /* microapp_submit_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "microapp_submit_btn@2x.png"; sourceTree = "<group>"; };
+		9E5D99FF157FEF7800CA8C34 /* LLStudentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLStudentViewController.h; sourceTree = "<group>"; };
+		9E5D9A00157FEF7800CA8C34 /* LLStudentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLStudentViewController.m; sourceTree = "<group>"; };
+		9E5D9A02157FEFB300CA8C34 /* LLStudentProfileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLStudentProfileCell.h; sourceTree = "<group>"; };
+		9E5D9A03157FEFB300CA8C34 /* LLStudentProfileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLStudentProfileCell.m; sourceTree = "<group>"; };
+		9E5D9A091580017E00CA8C34 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		9E8552DB157EA41A00823E0E /* LLStudentsClassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLStudentsClassViewController.h; sourceTree = "<group>"; };
+		9E8552DC157EA41A00823E0E /* LLStudentsClassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLStudentsClassViewController.m; sourceTree = "<group>"; };
 		9EC308B2154D46E7003086C5 /* Licenta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Licenta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EC308B6154D46E7003086C5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9EC308B8154D46E7003086C5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -67,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E5D9A0A1580017E00CA8C34 /* MessageUI.framework in Frameworks */,
 				9EC308B7154D46E7003086C5 /* UIKit.framework in Frameworks */,
 				9EC308B9154D46E7003086C5 /* Foundation.framework in Frameworks */,
 				9EC308BB154D46E7003086C5 /* CoreGraphics.framework in Frameworks */,
@@ -87,6 +99,24 @@
 			path = Classes/Classes;
 			sourceTree = "<group>";
 		};
+		9E5D99FC157FEF6F00CA8C34 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9E5D9A02157FEFB300CA8C34 /* LLStudentProfileCell.h */,
+				9E5D9A03157FEFB300CA8C34 /* LLStudentProfileCell.m */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		9E5D99FD157FEF6F00CA8C34 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9E5D99FF157FEF7800CA8C34 /* LLStudentViewController.h */,
+				9E5D9A00157FEF7800CA8C34 /* LLStudentViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		9E7E562B155057AD00F4AC85 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +127,26 @@
 			);
 			name = Login;
 			path = Classes/Login;
+			sourceTree = "<group>";
+		};
+		9E8552D5157EA2CA00823E0E /* Student */ = {
+			isa = PBXGroup;
+			children = (
+				9E5D99FC157FEF6F00CA8C34 /* Cells */,
+				9E5D99FD157FEF6F00CA8C34 /* Controller */,
+			);
+			name = Student;
+			path = Classes/Student;
+			sourceTree = "<group>";
+		};
+		9E8552DA157EA3E300823E0E /* Class:Discipline */ = {
+			isa = PBXGroup;
+			children = (
+				9E8552DB157EA41A00823E0E /* LLStudentsClassViewController.h */,
+				9E8552DC157EA41A00823E0E /* LLStudentsClassViewController.m */,
+			);
+			name = "Class:Discipline";
+			path = "Classes/Class:Discipline";
 			sourceTree = "<group>";
 		};
 		9EC308A7154D46E6003086C5 = {
@@ -120,6 +170,7 @@
 		9EC308B5154D46E7003086C5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9E5D9A091580017E00CA8C34 /* MessageUI.framework */,
 				9EC308B6154D46E7003086C5 /* UIKit.framework */,
 				9EC308B8154D46E7003086C5 /* Foundation.framework */,
 				9EC308BA154D46E7003086C5 /* CoreGraphics.framework */,
@@ -136,6 +187,8 @@
 				9EC308D5154D7931003086C5 /* RootViewController.h */,
 				9EC308D6154D7931003086C5 /* RootViewController.m */,
 				9E5827CF157D34DB00D58CC5 /* Classes */,
+				9E8552DA157EA3E300823E0E /* Class:Discipline */,
+				9E8552D5157EA2CA00823E0E /* Student */,
 				9E7E562B155057AD00F4AC85 /* Login */,
 				9EE3AFD6157D1503009A78D1 /* Core */,
 				9EC308CA154D46E7003086C5 /* Licenta.xcdatamodeld */,
@@ -289,6 +342,9 @@
 				9EE7150F1569645400CA394B /* LLAuthenticationHandler.m in Sources */,
 				9EE3AFDA157D151F009A78D1 /* Defines.m in Sources */,
 				9E5827D2157D35EA00D58CC5 /* LLClassesViewController.m in Sources */,
+				9E8552DD157EA41A00823E0E /* LLStudentsClassViewController.m in Sources */,
+				9E5D9A01157FEF7800CA8C34 /* LLStudentViewController.m in Sources */,
+				9E5D9A04157FEFB300CA8C34 /* LLStudentProfileCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,7 +382,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -345,7 +401,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
