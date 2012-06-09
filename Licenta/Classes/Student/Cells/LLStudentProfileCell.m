@@ -20,8 +20,6 @@ static const CGRect kPhoneNumberLabelFrame	= {100.0f, 70.0f, 200.0f, 25.0f};
 	UILabel						*_studentNameLabel;
 	UILabel						*_studentEmailLabel;
 	UILabel						*_studentPhoneLabel;
-	EmailPhoneActionBlock	_emailActionBlock;
-	EmailPhoneActionBlock	_phoneActionBlock;
 }
 
 @end
@@ -31,14 +29,10 @@ static const CGRect kPhoneNumberLabelFrame	= {100.0f, 70.0f, 200.0f, 25.0f};
 @implementation LLStudentProfileCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style 
-	 reuseIdentifier:(NSString *)reuseIdentifier 
-	phoneActionBlock:(EmailPhoneActionBlock)phoneActionBlock
-andEmailActionBlock:(EmailPhoneActionBlock)emailActionBlock {
+	 reuseIdentifier:(NSString *)reuseIdentifier {
 	self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
 	if (self) {
 		// Initialization code
-		_emailActionBlock = [emailActionBlock copy];
-		_phoneActionBlock = [phoneActionBlock copy];
 
 		// Profile image
 		_profileImageView = [[UIImageView alloc] initWithFrame:kProfileImageViewFrame];
@@ -75,16 +69,15 @@ andEmailActionBlock:(EmailPhoneActionBlock)emailActionBlock {
 	// Configure the view for the selected state
 }
 
-#pragma mark - Send email
 /*
- * Send an email
+ * Update cell with name, email and phone number
  */
-- (void)sendEmail {
-	_emailActionBlock();
-}
-
-- (void)phone {
-	_phoneActionBlock();
+- (void)updateCellWithName:(NSString *)nameString 
+				  emailAddress:(NSString *)emailAddress
+				andPhoneNumber:(NSString *)phoneNumber {
+	_studentNameLabel.text = nameString;
+	_studentEmailLabel.text = emailAddress;
+	_studentPhoneLabel.text = phoneNumber;
 }
 
 @end

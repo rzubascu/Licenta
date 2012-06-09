@@ -10,4 +10,9 @@
 
 @interface LLStudentViewController : UIViewController
 
+/*
+ * Custom init method
+ */
+- (id)initWithStudentManagedObject:(NSManagedObject *)studentManagedObject;
+
 @end

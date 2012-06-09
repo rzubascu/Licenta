@@ -16,7 +16,8 @@ static const UIEdgeInsets kStudentsTableViewInsets = {0.0f, 0.0f, 94.0f, 0.0f};
 #pragma mark - Private
 
 @interface LLStudentViewController () <UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate, MFMailComposeViewControllerDelegate> {
-	UITableView *_studentTableView; // Table view that display the info for a student
+	UITableView			*_studentTableView; // Table view that display the info for a student
+	NSManagedObject	*_studentManagedObject; // Current student object
 }
 /*
  * Update cell at index path
@@ -36,10 +37,11 @@ static const UIEdgeInsets kStudentsTableViewInsets = {0.0f, 0.0f, 94.0f, 0.0f};
 
 @implementation LLStudentViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-	self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+- (id)initWithStudentManagedObject:(NSManagedObject *)studentManagedObject {
+	self = [super initWithNibName:nil bundle:nil];
 	if (self) {
 		// Custom initialization
+		_studentManagedObject = studentManagedObject;
 	}
 	return self;
 }
@@ -47,6 +49,7 @@ static const UIEdgeInsets kStudentsTableViewInsets = {0.0f, 0.0f, 94.0f, 0.0f};
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	// Do any additional setup after loading the view.
+	self.navigationItem.title = @"Student Info";
 	// Table view
 	_studentTableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
 	_studentTableView.dataSource = self;
@@ -68,24 +71,31 @@ static const UIEdgeInsets kStudentsTableViewInsets = {0.0f, 0.0f, 94.0f, 0.0f};
 
 #pragma mark - UITableViewDelegate & UITableViewDataSource
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+	return 2;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+	NSInteger rowsNumber = (0 == section) ? 1 : 3;
 	
-	return 1;
+	return rowsNumber;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+	CGFloat rowHeight = (0 == indexPath.section) ? 100.0f : 44.0f;
+	
+	return rowHeight;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	static NSString *cellIdentifier = @"StudentCellIdentifier";
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+	Class cellClass = (0 == indexPath.section) ? [LLStudentProfileCell class] : [UITableViewCell class];
 	if (nil == cell) {
-		cell = [[LLStudentProfileCell alloc] initWithStyle:UITableViewCellStyleDefault
-													  reuseIdentifier:cellIdentifier
-				  phoneActionBlock:^{
-					  [self callPhoneNumber];
-				  } andEmailActionBlock:^{
-					  [self sendEmailTo:nil];
-				  }];
+		
+		cell = [[cellClass alloc] initWithStyle:UITableViewCellStyleDefault
+										reuseIdentifier:cellIdentifier];
 	}
-	cell.selectionStyle = UITableViewCellSelectionStyleNone;
 	// Update cell
 	[self updateCell:cell atIndexPath:indexPath];
 	
@@ -102,6 +112,40 @@ static const UIEdgeInsets kStudentsTableViewInsets = {0.0f, 0.0f, 94.0f, 0.0f};
  * Update cell at index path
  */
 - (void)updateCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+	switch (indexPath.section) {
+		case 0: {
+			cell.selectionStyle = UITableViewCellSelectionStyleNone;
+			NSString *studentNameString = [_studentManagedObject valueForKey:@"name"];
+			[(LLStudentProfileCell*)cell updateCellWithName:studentNameString
+														  emailAddress:@"N/A" 
+														andPhoneNumber:@"N/A"];
+			break;
+		}
+		case 1: {
+			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+			cell.selectionStyle = UITableViewCellSelectionStyleBlue;
+			switch (indexPath.row) {
+				case 0: {
+					cell.textLabel.text = @"Grades";
+					break;
+				}
+				case 1: {
+					cell.textLabel.text = @"Presence";
+					break;
+				}
+				case 2: {
+					cell.textLabel.text = @"Notes";
+					cell.detailTextLabel.text = @"Something";
+					break;
+				}	
+				default:
+					break;
+			}
+			break;
+		}
+		default:
+			break;
+	}
 }
 
 #pragma mark - Call phone number
@@ -153,8 +197,5 @@ static const UIEdgeInsets kStudentsTableViewInsets = {0.0f, 0.0f, 94.0f, 0.0f};
 - (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
 	[self dismissModalViewControllerAnimated:YES];
 }
-
-
-
 
 @end

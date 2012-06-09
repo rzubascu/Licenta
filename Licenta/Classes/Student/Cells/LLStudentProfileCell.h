@@ -13,11 +13,11 @@ typedef void(^EmailPhoneActionBlock)();
 @interface LLStudentProfileCell : UITableViewCell
 
 /*
- * Custom init method
+ * Update cell with name, email and phone number
  */
-- (id)initWithStyle:(UITableViewCellStyle)style 
-	 reuseIdentifier:(NSString *)reuseIdentifier 
-	phoneActionBlock:(EmailPhoneActionBlock)phoneActionBlock
-andEmailActionBlock:(EmailPhoneActionBlock)emailActionBlock;
+- (void)updateCellWithName:(NSString *)nameString 
+				  emailAddress:(NSString *)emailAddress
+				andPhoneNumber:(NSString *)phoneNumber;
+
 
 @end

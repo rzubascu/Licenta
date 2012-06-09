@@ -101,7 +101,9 @@ static const UIEdgeInsets kStudentsTableViewInsets = {0.0f, 0.0f, 94.0f, 0.0f};
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	// insert code here
-	LLStudentViewController *studentViewController = [[LLStudentViewController alloc] initWithNibName:nil bundle:nil];
+	NSManagedObject *selectedStudentObj = [_studentsArray objectAtIndex:indexPath.row];
+	NSLog(@"Student from class %@", [[_studentsArray objectAtIndex:indexPath.row] valueForKey:@"id_class"]);
+	LLStudentViewController *studentViewController = [[LLStudentViewController alloc] initWithStudentManagedObject:selectedStudentObj];
 	[self.navigationController pushViewController:studentViewController animated:YES];
 }
 
