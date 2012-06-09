@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84789CA1158365590088CC17 /* LLSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84789CA0158365590088CC17 /* LLSearchTableViewController.m */; };
 		9E5827D2157D35EA00D58CC5 /* LLClassesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5827D1157D35EA00D58CC5 /* LLClassesViewController.m */; };
 		9E5D82921555581A00795F76 /* microapp_input_field.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E5D82901555581A00795F76 /* microapp_input_field.png */; };
 		9E5D82931555581A00795F76 /* microapp_input_field@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E5D82911555581A00795F76 /* microapp_input_field@2x.png */; };
@@ -34,6 +35,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84789C9F158365590088CC17 /* LLSearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLSearchTableViewController.h; sourceTree = "<group>"; };
+		84789CA0158365590088CC17 /* LLSearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLSearchTableViewController.m; sourceTree = "<group>"; };
 		9E5827D0157D35EA00D58CC5 /* LLClassesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLClassesViewController.h; sourceTree = "<group>"; };
 		9E5827D1157D35EA00D58CC5 /* LLClassesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLClassesViewController.m; sourceTree = "<group>"; };
 		9E5D82901555581A00795F76 /* microapp_input_field.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = microapp_input_field.png; sourceTree = "<group>"; };
@@ -89,6 +92,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84789C9D158365590088CC17 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				84789C9E158365590088CC17 /* Controller */,
+			);
+			name = Search;
+			path = Classes/Search;
+			sourceTree = "<group>";
+		};
+		84789C9E158365590088CC17 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				84789C9F158365590088CC17 /* LLSearchTableViewController.h */,
+				84789CA0158365590088CC17 /* LLSearchTableViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		9E5827CF157D34DB00D58CC5 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +207,7 @@
 				9EC308C8154D46E7003086C5 /* AppDelegate.m */,
 				9EC308D5154D7931003086C5 /* RootViewController.h */,
 				9EC308D6154D7931003086C5 /* RootViewController.m */,
+				84789C9D158365590088CC17 /* Search */,
 				9E5827CF157D34DB00D58CC5 /* Classes */,
 				9E8552DA157EA3E300823E0E /* Class:Discipline */,
 				9E8552D5157EA2CA00823E0E /* Student */,
@@ -345,6 +367,7 @@
 				9E8552DD157EA41A00823E0E /* LLStudentsClassViewController.m in Sources */,
 				9E5D9A01157FEF7800CA8C34 /* LLStudentViewController.m in Sources */,
 				9E5D9A04157FEFB300CA8C34 /* LLStudentProfileCell.m in Sources */,
+				84789CA1158365590088CC17 /* LLSearchTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "LLLoginViewController.h"
 #import "LLClassesViewController.h"
+#import "LLSearchTableViewController.h"
 
 @implementation AppDelegate
 
@@ -84,9 +85,11 @@
 
 	_thirdController = [[UIViewController alloc] initWithNibName:nil bundle:nil];
 	_thirdController.tabBarItem.title = @"Events";
-	_fourthController = [[UIViewController alloc] initWithNibName:nil bundle:nil];
-	_fourthController.tabBarItem.title = @"Misc";
-	NSArray* controllers = [NSArray arrayWithObjects:_firstController, _navigationController, _thirdController, _fourthController, nil];
+    
+	_searchTableViewController = [[LLSearchTableViewController alloc] initWithNibName:nil bundle:nil];
+	_searchTableViewController.tabBarItem.title = @"Search";
+    
+	NSArray* controllers = [NSArray arrayWithObjects:_firstController, _navigationController, _thirdController, _searchTableViewController, nil];
 	
 	[_tabBarController setViewControllers:controllers animated:YES];
 	

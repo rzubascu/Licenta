@@ -10,13 +10,14 @@
 
 @class LLLoginViewController;
 @class LLClassesViewController;
+@class LLSearchTableViewController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate> {
 	UITabBarController *_tabBarController;
 	LLLoginViewController *_firstController;
 	LLClassesViewController *_secondController;
 	UIViewController *_thirdController;
-	UIViewController *_fourthController;
+	LLSearchTableViewController *_searchTableViewController;
 	UINavigationController *_navigationController;
 }
 
