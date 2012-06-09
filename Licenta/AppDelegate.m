@@ -10,6 +10,7 @@
 #import "LLLoginViewController.h"
 #import "LLClassesViewController.h"
 #import "LLSearchTableViewController.h"
+#import "LLEventsTableViewController.h"
 
 @implementation AppDelegate
 
@@ -83,13 +84,15 @@
 	_navigationController.tabBarItem.title = @"Classes";
 	_navigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
 
-	_thirdController = [[UIViewController alloc] initWithNibName:nil bundle:nil];
-	_thirdController.tabBarItem.title = @"Events";
+	_eventsTableViewController = [[LLEventsTableViewController alloc] initWithNibName:nil bundle:nil];
+    _eventsNavigationController = [[UINavigationController alloc] initWithRootViewController:_eventsTableViewController];
+    _eventsNavigationController.tabBarItem.title = @"Events";
+    _eventsNavigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
     
 	_searchTableViewController = [[LLSearchTableViewController alloc] initWithNibName:nil bundle:nil];
 	_searchTableViewController.tabBarItem.title = @"Search";
     
-	NSArray* controllers = [NSArray arrayWithObjects:_firstController, _navigationController, _thirdController, _searchTableViewController, nil];
+	NSArray* controllers = [NSArray arrayWithObjects:_firstController, _navigationController, _eventsNavigationController, _searchTableViewController, nil];
 	
 	[_tabBarController setViewControllers:controllers animated:YES];
 	

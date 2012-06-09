@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		84789CA1158365590088CC17 /* LLSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84789CA0158365590088CC17 /* LLSearchTableViewController.m */; };
+		84789CAE158368270088CC17 /* LLEventsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84789CAD158368270088CC17 /* LLEventsTableViewController.m */; };
+		84789CB5158374F20088CC17 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84789CB3158374F20088CC17 /* EventKit.framework */; };
+		84789CB6158374F20088CC17 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84789CB4158374F20088CC17 /* EventKitUI.framework */; };
 		9E5827D2157D35EA00D58CC5 /* LLClassesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5827D1157D35EA00D58CC5 /* LLClassesViewController.m */; };
 		9E5D82921555581A00795F76 /* microapp_input_field.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E5D82901555581A00795F76 /* microapp_input_field.png */; };
 		9E5D82931555581A00795F76 /* microapp_input_field@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E5D82911555581A00795F76 /* microapp_input_field@2x.png */; };
@@ -37,6 +40,10 @@
 /* Begin PBXFileReference section */
 		84789C9F158365590088CC17 /* LLSearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLSearchTableViewController.h; sourceTree = "<group>"; };
 		84789CA0158365590088CC17 /* LLSearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLSearchTableViewController.m; sourceTree = "<group>"; };
+		84789CAC158368270088CC17 /* LLEventsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLEventsTableViewController.h; sourceTree = "<group>"; };
+		84789CAD158368270088CC17 /* LLEventsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLEventsTableViewController.m; sourceTree = "<group>"; };
+		84789CB3158374F20088CC17 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		84789CB4158374F20088CC17 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
 		9E5827D0157D35EA00D58CC5 /* LLClassesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLClassesViewController.h; sourceTree = "<group>"; };
 		9E5827D1157D35EA00D58CC5 /* LLClassesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLClassesViewController.m; sourceTree = "<group>"; };
 		9E5D82901555581A00795F76 /* microapp_input_field.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = microapp_input_field.png; sourceTree = "<group>"; };
@@ -81,6 +88,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84789CB5158374F20088CC17 /* EventKit.framework in Frameworks */,
+				84789CB6158374F20088CC17 /* EventKitUI.framework in Frameworks */,
 				9E5D9A0A1580017E00CA8C34 /* MessageUI.framework in Frameworks */,
 				9EC308B7154D46E7003086C5 /* UIKit.framework in Frameworks */,
 				9EC308B9154D46E7003086C5 /* Foundation.framework in Frameworks */,
@@ -106,6 +115,24 @@
 			children = (
 				84789C9F158365590088CC17 /* LLSearchTableViewController.h */,
 				84789CA0158365590088CC17 /* LLSearchTableViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		84789CAA158368270088CC17 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				84789CAB158368270088CC17 /* Controller */,
+			);
+			name = Events;
+			path = Classes/Events;
+			sourceTree = "<group>";
+		};
+		84789CAB158368270088CC17 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				84789CAC158368270088CC17 /* LLEventsTableViewController.h */,
+				84789CAD158368270088CC17 /* LLEventsTableViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -191,6 +218,8 @@
 		9EC308B5154D46E7003086C5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				84789CB3158374F20088CC17 /* EventKit.framework */,
+				84789CB4158374F20088CC17 /* EventKitUI.framework */,
 				9E5D9A091580017E00CA8C34 /* MessageUI.framework */,
 				9EC308B6154D46E7003086C5 /* UIKit.framework */,
 				9EC308B8154D46E7003086C5 /* Foundation.framework */,
@@ -207,6 +236,7 @@
 				9EC308C8154D46E7003086C5 /* AppDelegate.m */,
 				9EC308D5154D7931003086C5 /* RootViewController.h */,
 				9EC308D6154D7931003086C5 /* RootViewController.m */,
+				84789CAA158368270088CC17 /* Events */,
 				84789C9D158365590088CC17 /* Search */,
 				9E5827CF157D34DB00D58CC5 /* Classes */,
 				9E8552DA157EA3E300823E0E /* Class:Discipline */,
@@ -368,6 +398,7 @@
 				9E5D9A01157FEF7800CA8C34 /* LLStudentViewController.m in Sources */,
 				9E5D9A04157FEFB300CA8C34 /* LLStudentProfileCell.m in Sources */,
 				84789CA1158365590088CC17 /* LLSearchTableViewController.m in Sources */,
+				84789CAE158368270088CC17 /* LLEventsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

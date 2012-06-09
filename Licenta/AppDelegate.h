@@ -11,14 +11,16 @@
 @class LLLoginViewController;
 @class LLClassesViewController;
 @class LLSearchTableViewController;
+@class LLEventsTableViewController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate> {
-	UITabBarController *_tabBarController;
-	LLLoginViewController *_firstController;
-	LLClassesViewController *_secondController;
-	UIViewController *_thirdController;
+	UITabBarController          *_tabBarController;
+	LLLoginViewController       *_firstController;
+	LLClassesViewController     *_secondController;
+	LLEventsTableViewController *_eventsTableViewController;
 	LLSearchTableViewController *_searchTableViewController;
-	UINavigationController *_navigationController;
+	UINavigationController      *_navigationController;
+    UINavigationController      *_eventsNavigationController;
 }
 
 @property (strong, nonatomic) UIWindow *window;
